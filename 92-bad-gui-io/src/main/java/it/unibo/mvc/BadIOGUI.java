@@ -80,14 +80,13 @@ public class BadIOGUI {
         read.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                List<String> i = null;
                 try {
-                    i = Files.readAllLines(new File(PATH).toPath(), StandardCharsets.UTF_8);
+                    final List<String> i = Files.readAllLines(new File(PATH).toPath(), StandardCharsets.UTF_8);
+                    System.out.println(i);
                 } catch (IOException e1) {
                     JOptionPane.showMessageDialog(frame, e1, "Error", JOptionPane.ERROR_MESSAGE);
                     e1.printStackTrace();
                 }
-                System.out.println(i);
             }
         });
     }
