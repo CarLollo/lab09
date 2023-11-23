@@ -54,29 +54,6 @@ public final class SimpleGUI {
             }
             
         });
-
-        //TOD0: delete
-        /*final JFileChooser fileChooser = new JFileChooser();
-        final JButton browserButton = new JButton(); 
-        browserButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Qui abbiamo cliccato il bottone
-                final int chooseResult = fileChooser.showSaveDialog(elementPanel);
-                if(chooseResult == JFileChooser.APPROVE_OPTION) {
-                    SimpleGUI.this.controller.setFile(fileChooser.getSelectedFile());
-                    textArea.setText(SimpleGUI.this.controller.getPath());
-                } else if( chooseResult == JFileChooser.CANCEL_OPTION) {
-                    JOptionPane.showMessageDialog(elementPanel, "Errore"); // verify
-                }
-
-            }
-        });*/
-
-
-
-
-        
     }
 
     
