@@ -2,6 +2,7 @@ package it.unibo.mvc;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * 
@@ -13,7 +14,7 @@ public final class SimpleController implements Controller {
 
     @Override
     public void setNext(String s) {
-        this.list.add(s);
+        Objects.requireNonNull(this.list.add(s), "The string cannot be null!");
     }
 
     @Override
@@ -28,6 +29,9 @@ public final class SimpleController implements Controller {
 
     @Override
     public void printString() {
+        if (this.getNext() == null) {
+            throw new IllegalStateException("The string cannot be unset!");
+        }
         System.out.println(this.getNext());
     }
 
