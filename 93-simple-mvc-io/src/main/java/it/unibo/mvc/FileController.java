@@ -12,7 +12,7 @@ public interface FileController {
     
     File getFile();
     
-    String getPath();
+    String getPathFile();
 
     void writeLine(String s) throws IOException;
 }
